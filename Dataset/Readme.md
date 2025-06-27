@@ -1,16 +1,20 @@
-# 📊 Dataset Description
+## 📊 Dataset Description
 
-## Dogecoin 10 Years.json
+### `doge_dataset_day_pmv.csv`
 
-**Source**: [Dogecoin 10 Years.json from Kaggle](https://www.kaggle.com/datasets/danieltsai04/dogecoin-historical-data-2013-2023/data)  
-**API Reference**: [CoinGecko Public API](https://www.coingecko.com/api/documentation)
+This dataset contains historical data on Dogecoin (DOGE) in USD, starting from **2013-12-15** up to **2025-06-25**, aggregated from the CoinGecko public API.
+ 
+**🔗 API Reference**: [CoinGecko Public API](https://www.coingecko.com/api/documentation)
 
-This dataset provides approximately 10 years of historical data on Dogecoin (DOGE) in USD, collected via the CoinGecko public API. It includes the following key metrics:
+It includes the following key daily metrics:
 
-- **Price**
-- **Market Capitalization**
-- **24-Hour Trading Volume**
+- 📅 **Date** — Daily records from 2013–2025  
+- 💲 **Price** — Closing price of Dogecoin in USD  
+- 🏦 **Market Capitalization** — Daily market cap value in USD  
+- 📊 **24-Hour Volume** — Total DOGE traded over 24 hours (USD)
 
-The data is originally provided in JSON format, structured as nested lists containing UNIX timestamps and their corresponding values. For example:
-```json
-"prices": [[timestamp, price], ...]
+Interactive data exploration is available in the [`EDA.ipynb`](./EDA.ipynb) notebook.
+
+Static preview plot of the full dataset:
+
+![Dogecoin Historical Plot](./img/doge_plotly.jpg)
