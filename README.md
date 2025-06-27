@@ -6,9 +6,13 @@ A machine-learning project to analyze and forecast Dogecoin (DOGE) prices using 
 
 ## 📂 Dataset
 
-- **Raw Data**: Historical Dogecoin data (2013–2023) sourced from the [CoinGecko API](https://www.coingecko.com/api/documentation) via [Kaggle](https://www.kaggle.com/datasets/danieltsai04/dogecoin-historical-data-2013-2023/data).
-- **Recent Updates**: Automatically appended the last 365 days of data (price, market cap, volume) using the PyCoinGecko client and daily range endpoint.
-- **Preprocessed CSV**: Merged JSON → flattened CSV, with added calendar dates and lagged features for time-series modeling.
+- **Raw Data**: Historical Dogecoin data (2013–2025) sourced from the [CoinGecko API](https://www.coingecko.com/api/documentation).
+- **Recent Updates**: Automatically appended  data (price, market cap, volume) using the PyCoinGecko client and daily range endpoint.
+
+Static preview plot of the full dataset:
+
+![Dogecoin Historical Plot](./Dataset/img/doge_plotly.jpg)
+
 
 ---
 
@@ -16,7 +20,7 @@ A machine-learning project to analyze and forecast Dogecoin (DOGE) prices using 
 
 | Component                            | Status            | Description                                                                |
 |-------------------------------------|-------------------|----------------------------------------------------------------------------|
-| **Data Collection**                  | ✅ Completed       | Full 2013–2023 dataset + automated daily updates (last 365 days)           |
+| **Data Collection**                  | ✅ Completed       | Full 2013–2025 dataset + automated daily updates (last 365 days)           |
 | **Data Cleaning & EDA**              | ✅ Completed       | Removed anomalies, handled missing values, visualized trends with Plotly    |
 | **Feature Engineering**              | ✅ Completed       | Added 1-day lags (`market_cap_lag1`, `volume_lag1`), rolling averages (7d)  |
 | **Time-Series Split**                | ✅ Completed       | Implemented chronological 80/20 train–test split                            |
