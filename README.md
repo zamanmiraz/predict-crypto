@@ -13,11 +13,11 @@ A machine-learning project to analyze and forecast Dogecoin (DOGE) prices using 
 
 ## 📈 Model Results
 
-A baseline **Linear Regression** model was developed to predict **Dogecoin (DOGE) prices** using historical market capitalization and trading volume as input features.
+A baseline **Linear Regression** and **Random Forest** model was developed to predict **Dogecoin (DOGE) prices** using historical market capitalization and trading volume as input features.
 
 ### 📊 Actual vs. Predicted Price
 
-![Linear Regression Result](./result_img/linear_regression.png)
+![Prediction Comparison](./result_img/pred.png)
 
 📘 **Notebook**: Full model training, evaluation metrics, and exploratory analysis are available in [`predict.ipynb`](./predict.ipynb).
 
