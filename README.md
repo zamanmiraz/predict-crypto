@@ -9,10 +9,22 @@ A machine-learning project to analyze and forecast Dogecoin (DOGE) prices using 
 - **Raw Data**: Historical Dogecoin data (2013–2025) sourced from the [CoinGecko API](https://www.coingecko.com/api/documentation).
 - **Recent Updates**: Automatically appended  data (price, market cap, volume) using the PyCoinGecko client and daily range endpoint.
 
-Static preview plot of the full dataset:
+---
 
-![Dogecoin Historical Plot](./Dataset/img/doge_plotly.jpg)
+## 📈 Model Results
 
+A baseline **Linear Regression** model was developed to predict **Dogecoin (DOGE) prices** using historical market capitalization and trading volume as input features.
+
+### 📊 Actual vs. Predicted Price
+
+![Linear Regression Result](./result_img/linear_regression.png)
+
+📘 **Notebook**: Full model training, evaluation metrics, and exploratory analysis are available in [`predict.ipynb`](./predict.ipynb).
+
+📅 **Latest Prediction**  
+Using data up to **2025-06-27**, the model predicts the Dogecoin closing price for **today** as:
+
+> 💰 **$0.182815**
 
 ---
 
