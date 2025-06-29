@@ -4,50 +4,57 @@ A machine-learning project to analyze and forecast Dogecoin (DOGE) prices using 
 
 ---
 
-## 📂 Dataset
-
-- **Raw Data**: Historical Dogecoin data (2013–2025) sourced from the [CoinGecko API](https://www.coingecko.com/api/documentation).
-- **Recent Updates**: Automatically appended  data (price, market cap, volume) using the PyCoinGecko client and daily range endpoint.
-
----
-
 ## 📈 Model Results
 
-A baseline **Linear Regression** and **Random Forest** model was developed to predict **Dogecoin (DOGE) prices** using historical market capitalization and trading volume as input features.
+We trained and evaluated four different regression models on the historical Dogecoin dataset using 70% training and 30% test split with lag-based features.
+
+| Model             | Mean Squared Error (MSE) | R² Score |
+|------------------|--------------------------|----------|
+| Linear Regression| 0.000101                 | 0.9842   |
+| Random Forest     | 0.000813                 | 0.8733   |
+| XGBoost           | 0.001726                 | 0.7311   |
+| LightGBM          | 0.000670                 | 0.8956   |
+
+> All models were trained to predict the next-day **closing price** using 1-day lagged features like market cap, volume, open, high, and low.
 
 ### 📊 Actual vs. Predicted Price
 
 ![Prediction Comparison](./result_img/pred.png)
 
-📘 **Notebook**: Full model training, evaluation metrics, and exploratory analysis are available in [`predict.ipynb`](./predict.ipynb).
+📘 **Notebook**: Full model training, evaluation metrics in [`predict_OHLCVM.ipynb`](./predict_OHLCVM.ipynb).
 
 📅 **Latest Prediction**  
-Using data up to **2025-06-27**, the model predicts the Dogecoin closing price for **today** as:
 
-> 💰 **$0.182815**
+Based on yesterday’s market data (2025-06-27), the following models predicted today’s closing price of Dogecoin:
+
+| Model              | Predicted Price (USD) |
+|-------------------|------------------------|
+| Linear Regression | $0.157493              |
+| Random Forest     | $0.162845              |
+| XGBoost           | $0.164886              |
+| LightGBM          | $0.167169              |
+
+> 📊 These predictions are generated using lag-based features from the latest available data. See [`predict.ipynb`](./predict.ipynb) for implementation details.
+
+
 
 ---
 
 ## 🚀 Project Status
 
+
 | Component                            | Status            | Description                                                                |
 |-------------------------------------|-------------------|----------------------------------------------------------------------------|
-| **Data Collection**                  | ✅ Completed       | Full 2013–2025 dataset + automated daily updates (last 365 days)           |
+| **Data Collection**                  | 🔄 In Progress       | Full 2013–2025 dataset + automated daily updates (last 365 days)           |
 | **Data Cleaning & EDA**              | ✅ Completed       | Removed anomalies, handled missing values, visualized trends with Plotly    |
-| **Feature Engineering**              | ✅ Completed       | Added 1-day lags (`market_cap_lag1`, `volume_lag1`), rolling averages (7d)  |
-| **Time-Series Split**                | ✅ Completed       | Implemented chronological 80/20 train–test split                            |
-| **Baseline Model (Linear Reg.)**     | ⚙️ Done            | R² ≈ 0.93, MSE ≈ 0.0006 using lag features                                  |
+| **Feature Engineering**              | 🔄 In Progress     | Added 1-day lags (`market_cap_lag1`, `volume_lag1`), rolling averages (7d)  |
 | **Advanced Model Prototyping**       | 🔄 In Progress     | Testing Random Forest, XGBoost, and ARIMA                                  |
-| **Model Evaluation & Validation**    | ⏳ Pending         | Rolling/​walk-forward cross-validation, error analysis                       |
-| **Visualization (Plotly)**           | ✅ Implemented     | Interactive time series and MA plots in `eda.ipynb`                         |
-| **README & Documentation**           | ✅ Updated         | Added status table, dataset description, usage instructions                |
 
 ---
 
 ## 🔮 Future Plans
 
-1. **Model Expansion**  
-   - Implement and compare **XGBoost**, and **LightGBM**.  
+1. **Model Expansion**   
    - Explore **ARIMA**, **Prophet**, and **LSTM** for time-series forecasting.
 
 2. **Enhanced Feature Sets**  
