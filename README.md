@@ -44,20 +44,10 @@ Using data up to **2025-06-27**, the model predicts the Dogecoin closing price f
 
 ---
 
-## 🛠 What’s New
-
-- **Automated Data Pipeline**: Integrated PyCoinGecko wrapper to fetch the most recent 365 days of DOGE data and append to existing records.
-- **Lagged & Rolling Features**: Enhanced feature set with 1-day lag variables and 7-day moving averages for price, market cap, and volume.
-- **Chronological Train/Test Split**: Switched from random sampling to time-aware split to prevent data leakage.
-- **Improved Baseline**: Refined linear regression shows R² ≈ 0.935, a realistic performance metric for forecasting.
-- **Modular Notebooks**: Separate `predict.ipynb` for modeling and `eda.ipynb` for exploratory analysis.
-
----
-
 ## 🔮 Future Plans
 
 1. **Model Expansion**  
-   - Implement and compare **Random Forests**, **XGBoost**, and **LightGBM**.  
+   - Implement and compare **XGBoost**, and **LightGBM**.  
    - Explore **ARIMA**, **Prophet**, and **LSTM** for time-series forecasting.
 
 2. **Enhanced Feature Sets**  
