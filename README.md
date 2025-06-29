@@ -6,38 +6,24 @@ A machine-learning project to analyze and forecast Dogecoin (DOGE) prices using 
 
 ## 📈 Model Results
 
-We trained and evaluated four different regression models on the historical Dogecoin dataset using 70% training and 30% test split with lag-based features.
+We trained and evaluated four regression models on the historical Dogecoin dataset using a 70/30 chronological split with 1-day lag-based features (`market_cap`, `volume`, `volume_DOGE`, `open`, `high`, `low`).
 
-| Model             | Mean Squared Error (MSE) | R² Score |
-|------------------|--------------------------|----------|
-| Linear Regression| 0.000101                 | 0.9842   |
-| Random Forest     | 0.000813                 | 0.8733   |
-| XGBoost           | 0.001726                 | 0.7311   |
-| LightGBM          | 0.000670                 | 0.8956   |
+### 🔍 Evaluation & Latest Prediction (as of 2025-06-28)
 
-> All models were trained to predict the next-day **closing price** using 1-day lagged features like market cap, volume, open, high, and low.
+| Model              | MSE         | R² Score | Predicted Price (USD) |
+|-------------------|-------------|----------|------------------------|
+| Linear Regression | 0.000101    | 0.9842   | $0.157493              |
+| Random Forest     | 0.000813    | 0.8733   | $0.162845              |
+| XGBoost           | 0.001726    | 0.7311   | $0.164886              |
+| LightGBM          | 0.000670    | 0.8956   | $0.167169              |
+
+> 📊 See [`predict.ipynb`](./predict.ipynb) for training details, evaluation, and code.
 
 ### 📊 Actual vs. Predicted Price
 
-![Prediction Comparison](./result_img/pred.png)
+<img src="./result_img/pred.png" alt="Prediction Comparison" width="800"/>
 
 📘 **Notebook**: Full model training, evaluation metrics in [`predict_OHLCVM.ipynb`](./predict_OHLCVM.ipynb).
-
-📅 **Latest Prediction**  
-
-Based on yesterday’s market data (2025-06-27), the following models predicted today’s closing price of Dogecoin:
-
-| Model              | Predicted Price (USD) |
-|-------------------|------------------------|
-| Linear Regression | $0.157493              |
-| Random Forest     | $0.162845              |
-| XGBoost           | $0.164886              |
-| LightGBM          | $0.167169              |
-
-> 📊 These predictions are generated using lag-based features from the latest available data. See [`predict.ipynb`](./predict.ipynb) for implementation details.
-
-
-
 ---
 
 ## 🚀 Project Status
