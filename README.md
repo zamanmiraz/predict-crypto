@@ -6,16 +6,16 @@ A machine-learning project to analyze and forecast Dogecoin (DOGE) prices using 
 
 ## 📈 Model Results
 
-We trained and evaluated four regression models on the historical Dogecoin dataset using a 70/30 chronological split with 1-day lag-based features (`market_cap`, `volume`, `volume_DOGE`, `open`, `high`, `low`).
+Four regression models were trained and evaluated on the historical Dogecoin dataset using a 70/30 chronological split. The models leveraged 1-day lag-based features (`market_cap`, `volume`, `volume_DOGE`, `open`, `high`, `low`). Hyperparameter tuning was also performed to optimize performance.
 
 ### 🔍 Evaluation & Latest Prediction (as of 2025-06-28)
 
 | Model              | MSE         | R² Score | Predicted Price (USD) |
 |-------------------|-------------|----------|------------------------|
 | Linear Regression | 0.000101    | 0.9842   | $0.157493              |
-| Random Forest     | 0.000813    | 0.8733   | $0.162845              |
-| XGBoost           | 0.001726    | 0.7311   | $0.164886              |
-| LightGBM          | 0.000670    | 0.8956   | $0.167169              |
+| Random Forest     | 0.000813    | 0.8733   | $0.163134              |
+| XGBoost           | 0.001726    | 0.7311   | $0.169618             |
+| LightGBM          | 0.000670    | 0.8956   | $0.161885              |
 
 > 📊 See [`predict.ipynb`](./predict.ipynb) for training details, evaluation, and code.
 
