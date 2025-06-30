@@ -17,6 +17,11 @@ Four regression models were trained and evaluated on the historical Dogecoin dat
 | XGBoost           | 0.001726    | 0.7311   | $0.169618             |
 | LightGBM          | 0.000670    | 0.8956   | $0.161885              |
 
+📖 **Detailed Explanation**  
+For an in-depth discussion of the results and model comparisons, check out the accompanying Medium article:  
+👉 [When Simplicity Wins: Linear Regression Tops Complex Models in 1-Day Lag Dogecoin Forecasting](https://medium.com/@mirazzaman/when-simplicity-wins-linear-regression-tops-complex-models-in-1-day-lag-dogecoin-forecasting-4f7d1965e3a4)
+
+
 > 📊 See [`predict.ipynb`](./predict.ipynb) for training details, evaluation, and code.
 
 ### 📊 Actual vs. Predicted Price
