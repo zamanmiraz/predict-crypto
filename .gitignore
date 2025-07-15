@@ -1,2 +1,3 @@
 # .gitignore
 .env
+predict-bitcoin/Dataset/btcusd_1-min_data.csv
