@@ -1,6 +1,6 @@
-# 🐶 Predict-Doge
+# 🐶 Predict-Crypto
 
-A machine-learning project to analyze and forecast Dogecoin (DOGE) prices using historical market data and enriched feature sets.
+A machine-learning project to analyze and forecast Cryptocurrency prices using historical market data and enriched feature sets.
 
 ---
 
