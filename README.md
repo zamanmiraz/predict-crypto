@@ -1,13 +1,12 @@
-# 🐶 Predict‑Crypto
+# 🔮📈 Predict‑Crypto
 
-[![Notebook](https://img.shields.io/badge/notebooks‑ready‑green)](#repository-structure)  
-A machine‑learning project to analyze and forecast cryptocurrency prices (Bitcoin & Dogecoin) using historical market data, enriched feature sets, and time‑series models (ARIMA/SARIMA).
+A machine‑learning project to analyze and forecast cryptocurrency prices (Bitcoin & Dogecoin) using historical market data, enriched feature sets, and time‑series models (ARIMA/SARIMA). 
 
 ---
 
 ## 📋 Table of Contents
 
-- [🐶 Predict‑Crypto](#-predictcrypto)
+- [🔮📈 Predict‑Crypto](#-predictcrypto)
   - [📋 Table of Contents](#-table-of-contents)
   - [🚀 Features](#-features)
   - [📂 Repository Structure](#-repository-structure)
