@@ -166,7 +166,7 @@ def fetch_and_append_missing_data(
 if __name__ == "__main__":
     currency_pair = "btcusd"
     # Use your local dataset path
-    existing_data_filename = r".\btcusd_1-min_data.csv"
+    existing_data_filename = r"../data/bitcoin/btcusd_1-min_data.csv"
     output_filename = existing_data_filename  # Save updates to the same file
 
     print(f"Current time (UTC): {datetime.now(timezone.utc)}")

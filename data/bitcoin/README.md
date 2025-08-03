@@ -18,7 +18,10 @@ This folder contains the daily historical price and volume data for Bitcoin (BTC
 | `Close`           | Closing price at end of day                                |
 | `Volume_(BTC)`    | Volume traded in BTC                                       |
 
-––  
+## 📅 Updating the Dataset
+
+To refresh the Bitcoin dataset with the latest data, run the script located at: `../src/update_bitcoin.py`
+ 
 > **Source credit:**  
 > Zieliński, M. C. “Bitcoin Historical Data.” Kaggle, 2018.  
 > URL: https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data  
