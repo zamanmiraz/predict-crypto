@@ -12,3 +12,10 @@ def calculate_macd(df, short_window=12, long_window=26, signal_window=9):
     df['MACD'] = df['EMA_short'] - df['EMA_long']
     df['Signal_Line'] = df['MACD'].ewm(span=signal_window, adjust=False).mean()
     return df
+
+# Additional utility functions can be added here as needed.
+# Calculate MVRV
+def calculate_mvrv(df, market_cap, realized_cap):
+    # compute the market cap
+    
+    return market_cap / realized_cap
